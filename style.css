@@ -1,5 +1,198 @@
-css id="r4m8zn"
-  body {
-        background-color: black;
-        color: white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+    color: #e2e8f0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.8s ease-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* SECTIONS */
+section {
+    padding: 40px 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    background-color: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* TITRES */
+h2 {
+    color: #0ea5e9;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #0ea5e9;
+    display: inline-block;
+}
+
+h3 {
+    color: #06b6d4;
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+/* PROJETS */
+.project {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.6);
+    border-left: 5px solid #0ea5e9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    background: rgba(15, 23, 42, 0.9);
+    transform: translateX(8px);
+    box-shadow: 0 5px 15px rgba(14, 165, 233, 0.2);
+}
+
+.project p {
+    color: #cbd5e1;
+    margin-top: 10px;
+}
+
+/* LISTE */
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill label {
+    display: block;
+    font-weight: 500;
+    color: #e2e8f0;
+    margin-bottom: 5px;
+}
+
+.skill progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.skill progress::-webkit-progress-bar {
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 5px;
+}
+
+.skill progress::-webkit-progress-value {
+    background: #06b6d4;
+    border-radius: 5px;
+}
+
+.skill progress::-moz-progress-bar {
+    background: #06b6d4;
+    border-radius: 5px;
+}
+
+/* CONTACT */
+#contact p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #cbd5e1;
+}
+
+#contact a {
+    color: #0ea5e9;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+#contact a:hover {
+    color: #06b6d4;
+    border-bottom: 2px solid #06b6d4;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(2, 6, 23, 0.9);
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+    margin-top: 40px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* ANIMATIONS */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    section {
+        margin: 20px 10px;
+        padding: 25px 20px;
+    }
+    
+    ul {
+        grid-template-columns: 1fr;
+    }
 }
